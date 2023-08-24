@@ -16,12 +16,15 @@ const SContainer = css`
 `;
 
 
-function Principal(props) {
-    const [ principal, setPrincipal ] = useRecoilState(principalState);
+function Principal(props) { // 전역상태
+    const [ principal, setPrincipal ] = useRecoilState(principalState); //principalState 은 principalStore에 연결 되어 있음
     const [ num, setNum ] = useState(0);
 
     useEffect(() => {
-        
+        setPrincipal({
+            ...principal,
+            username: "abcdef"
+        })
     },[]);
 
     return (

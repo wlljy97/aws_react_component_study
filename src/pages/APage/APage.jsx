@@ -31,7 +31,7 @@ function APage(props) {
         return () => {
             console.log("언마운트")
         };
-    }, [] // ← depc 의존대상 (해당상태를 대입)
+    }, [ inputValueObjs, name ] // ← depc 의존대상 (해당상태를 대입)
     );
 
     const calc = (x, y) => {

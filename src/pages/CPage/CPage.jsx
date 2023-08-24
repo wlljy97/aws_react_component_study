@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import UseMemoContainer from '../../components/UseMemoContainer/UseMemoContainer';
 
 function CPage(props) {
-    const [ studentYear, setStudentYear ] = useState("1");
+    const [ studentYear, setStudentYear ] = useState("");
     const [ hobby, setHobby ] = useState("");
 
     const handleInputsChange = (e) => {
@@ -17,7 +17,7 @@ function CPage(props) {
     return (
         <div>
             <p>당신의 학년은 몇 학년입니까?</p>
-            
+
             <input type="number" name='studentYear' onChange={handleInputsChange} />
 
             <p>당신의 취미는 무엇입니까?</p>
